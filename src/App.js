@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './composants/Navbar.jsx';
+import Footer from './composants/Footer.jsx';
+import Projects from "./composants/Projects.jsx";  // Assurez-vous que le nom du fichier est correct
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Projects />  {/* Utilisez le composant Projects au lieu de Cards */}
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* Ajoutez ces styles à votre fichier CSS principal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Assurez-vous que la modale est au-dessus du reste du contenu */
+}
+
+.modal-content {
+  background: #fff;
+  width: 80%;
+  height: 80%; /* Ajustez la hauteur selon vos besoins */
+  max-width: 800px;
+  max-height: 600px; /* Ajustez la hauteur selon vos besoins */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: auto; /* Permet le défilement si le contenu dépasse la hauteur définie */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}/*# sourceMappingURL=Modal.css.map */

@@ -1,0 +1,70 @@
+h2{
+
+    margin-top: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-family: 'Syne', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 1.1rem;
+  white-space: nowrap;
+
+}
+.project {
+ 
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+    background-color: #fff8f5;
+  }
+  
+  .project img {
+    max-width: 100%;
+    border-radius: 10px;
+    border-top: 30px solid transparent; /* Ajoutez une bordure transparente au-dessus de l'image */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .icon-content-show {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+  
+  .project:hover {
+    background-color: #fff8f5;
+  }
+  
+  .project:hover img {
+    opacity: 0.7;
+    border-top: 0; /* Supprimez la bordure lors du survol pour créer l'effet désiré */
+  }
+  
+  .project:hover .icon-content-show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 125px;
+    margin-top: 80px;
+  }
+  
+  .column {
+    flex-basis: calc(34.33% - 20px);
+    box-sizing: border-box;
+  }
+  
