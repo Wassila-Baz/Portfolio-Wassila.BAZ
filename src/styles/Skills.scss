@@ -1,0 +1,33 @@
+/* Skills.scss */
+
+.skills-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 80px; /* Ajustez la taille selon vos besoins */
+    height: 80px;
+    margin: 5px; /* Marge entre chaque icône */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre (optionnel) */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+
+  .icone-color{
+    background-color: #0f0823;
+  }
