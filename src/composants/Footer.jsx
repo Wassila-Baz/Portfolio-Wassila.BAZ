@@ -27,6 +27,12 @@ const Footer = () => {
           </a>
         </i>
       </div>
+      <p> &copy; 2024 Wassila BAZ. Tous droits réservés.</p>
+      <ul class="menu-list">
+        <li><a href="/politique-confidentialite">Politique de confidentialité</a></li>
+        <li><a href="/conditions-utilisation">Conditions d'utilisation</a></li>
+      </ul>
+  
     </footer>
   );
 };

@@ -1,26 +1,39 @@
 import React, { useState } from 'react';
-import Modal from './Modal.jsx';
 
-const Card = ({ title, imageSrc, githubLink }) => {
-  const [modalOpen, setModalOpen] = useState(false);
+const Card = ({ title, imageSrc, githubLink, liveLink }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const toggleModal = () => {
-    setModalOpen(!modalOpen);
-    document.body.classList.toggle('modal-open');
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
-    <div className="project" onClick={toggleModal}>
-      <img src={imageSrc} alt={title} />
+    <div
+      className={`project ${isHovered ? 'hovered' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <a href={liveLink} target="_blank" rel="noopener noreferrer">
+        <img src={imageSrc} alt={title} />
+      </a>
       <h3>{title}</h3>
-      <div className="icon-content-show">
-        <i className="fa-brands fa-github fa-2x">
+      <div className={`icon-content-${isHovered ? 'show' : 'hide'}`}>
+        <i className="fab fa-github fa-2x">
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </i>
+
+        <i className="fas fa-link fa-2x">
+          <a href={liveLink} target="_blank" rel="noopener noreferrer">
+            Site
+          </a>
+        </i>
       </div>
-      {modalOpen && <Modal project={{ title, imageSrc }} onClose={toggleModal} />}
     </div>
   );
 };

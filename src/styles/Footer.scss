@@ -1,6 +1,4 @@
 footer{
-    
-    height: 120px;
     background-color: #fff8f5;
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
@@ -27,4 +25,17 @@ padding-top: 50px;
 .fa-brands:hover{
   transform: rotate(360deg);
 color: #009092;
+}
+p{
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 25px;
+
+}
+
+.menu-list{
+  list-style-type: none;
+  text-align: center;
+  background-color:#fff8f5 ;
+  margin-top: 0;
 }

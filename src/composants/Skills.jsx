@@ -7,9 +7,9 @@ const SkillsComponent = () => {
       <h2>Compétences</h2>
       <div className="icon-container">
         <img src='/figma.png' alt="Figma" className="icon" />
-        <img src='/git.png' alt="Git" className="icon" />
+        <img src='/git.png' alt="Git" className="icon icone-color" />
         <img src='/github.png' alt="GitHub" className="icon icone-color" />
-        <img src='/reactjs.png' alt="ReactJS" className="icon icone-color" />
+        <img src='/reactjs.png' alt="ReactJS" className="icon " />
         <img src='/sass.png' alt="Sass" className="icon" />
         <img src='/javascript.png' alt="JavaScript" className="icon" />
       </div>
