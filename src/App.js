@@ -6,6 +6,8 @@ import Footer from './composants/Footer.jsx';
 import Projects from "./composants/Projects.jsx";  // Assurez-vous que le nom du fichier est correct
 import Skills from './composants/Skills.jsx' ;
 import Contact from './composants/Contact.jsx';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 function App() {
   return (
@@ -16,7 +18,6 @@ function App() {
         <Skills />
         <Contact />
         <Footer />
-     
       </div>
     </Router>
   );
