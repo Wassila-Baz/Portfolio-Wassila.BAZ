@@ -16,6 +16,9 @@ h2 {
 
 .project {
   margin: 10px;
+  padding: 10px; /* Ajoutez une marge intérieure pour définir l'espace à l'intérieur de la card */
+  max-width: 300px; /* Définissez la largeur maximale de la card */
+  box-sizing: border-box; /* Inclure la bordure et la marge intérieure dans la largeur totale */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -24,7 +27,7 @@ h2 {
 }
 
 .project img {
-  max-width: 100%;
+width: 70%;
   border-radius: 10px;
   border-top: 30px solid transparent; /* Ajoutez une bordure transparente au-dessus de l'image */
   transition: opacity 0.3s ease-in-out;

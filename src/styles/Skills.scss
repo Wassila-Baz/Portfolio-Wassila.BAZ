@@ -1,36 +1,29 @@
-/* Skills.scss */
 
-.skills-container {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  h2 {
+@import 'variables';
+@import 'mixins';
+
+h2 {
     font-size: 24px;
     margin-bottom: 10px;
     font-family: 'Bodoni Moda', serif;
-  }
-  
-  .icon-container {
+}
+
+.icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px;
+    margin: 80px; // Vous pouvez remplacer cette valeur par une variable si vous le souhaitez
+}
 
-  }
-  
-  .icon {
-    width: 80px; /* Ajustez la taille selon vos besoins */
-    height: 80px;
-    margin: 30px; /* Marge entre chaque icône */
-    border-radius: 10%;
-    box-shadow: 0 0 10px rgb(0, 144, 146);
+.icon {
+    width: $icon-size; // Utilisation de la variable pour la taille
+    height: $icon-size; // Utilisation de la variable pour la taille
+    margin: $icon-margin; // Utilisation de la variable pour la marge
+    border-radius: $icon-border-radius; // Utilisation de la variable pour le border-radius
+    box-shadow: $icon-box-shadow; // Utilisation de la variable pour la box-shadow
     display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  }
-
-  .icone-color{
-    background-color: #0f0823;
-  }
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: $icon-color; // Utilisation de la variable pour la couleur de fond
+}

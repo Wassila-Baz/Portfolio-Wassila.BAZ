@@ -21,7 +21,6 @@ function About() {
 
           À travers mon portfolio, je vous invite à découvrir mon parcours, mes compétences et les projets sur lesquels j'ai travaillé. Plongez dans mon univers où la passion pour la création rencontre l'expertise du développement web. Bienvenue dans mon monde numérique !
         </p>
-        {/* Ajoutez d'autres informations à propos de votre équipe, projet, etc. */}
       </div>
     </div>
   );

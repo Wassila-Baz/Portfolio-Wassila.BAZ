@@ -1,40 +1,39 @@
+
+@import 'variables';
+@import 'mixins';
+
 .about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1000px; /* Ajustez la largeur maximale selon vos besoins */
-    margin: 0 auto;
-    padding: 20px;
-    margin-bottom: 300px;
-    margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: $about-margin-bottom; // Utilisation de la variable
+  margin-top: $about-margin-top; // Utilisation de la variable
+}
 
-  }
-  
-  .about-content {
-    flex: 1; /* Ajustez la proportion du contenu par rapport à l'animation */
-    padding-right: 20px; /* Espace entre l'animation et le texte */
-  }
-  
-  .about-paragraph,
-  h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000000;
-    max-width: 466px;
-    margin: 0 auto;
+.about-content {
+  flex: 1;
+  padding-right: 20px;
+}
 
-    border-radius: 10px;
-  }
-  
-  h2 {
-    color: #333;
-    font-family: 'Syne', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 0.8rem;
-  }
-  
+.about-paragraph,
+h2 {
+  @include center-content; // Utilisation de la mixin
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  max-width: 466px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+  font-family: 'Syne', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}

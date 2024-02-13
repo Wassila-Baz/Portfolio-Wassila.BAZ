@@ -1,39 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
+import "../styles/Cards.scss";
 
-const Card = ({ title, imageSrc, githubLink, liveLink }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+const Card = ({ title, imageSrc, githubLink, liveLink, onClick }) => {
+  const handleCardClick = (event) => {
+    if (!event.target.closest('a')) {
+      event.preventDefault();
+      if (onClick) {
+        onClick();
+      } else {
+        window.open(liveLink, "_blank"); // Ouvre le lien dans un nouvel onglet
+      }
+    }
   };
 
   return (
-    <div
-      className={`project ${isHovered ? 'hovered' : ''}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <a href={liveLink} target="_blank" rel="noopener noreferrer">
+    <div className={`project`} onClick={handleCardClick}>
+      <div className="image-container">
         <img src={imageSrc} alt={title} />
-      </a>
-      <h3>{title}</h3>
-      <div className={`icon-content-${isHovered ? 'show' : 'hide'}`}>
-        <i className="fab fa-github fa-2x">
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        </i>
-
-        <i className="fas fa-link fa-2x">
-          <a href={liveLink} target="_blank" rel="noopener noreferrer">
-            Site
-          </a>
-        </i>
+        <div className="overlay">
+          <div className="links">
+            <a href={githubLink} target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-lg"></i></a>
+            <a href={liveLink} target="_blank" rel="noopener noreferrer"><i className="fas fa-link fa-lg"></i></a>
+          </div>
+        </div>
       </div>
+      <h3>{title}</h3>
     </div>
   );
 };

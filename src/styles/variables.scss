@@ -1,0 +1,30 @@
+
+//projet
+$project-margin: 15px;
+$project-max-width: 300px;
+$project-border-radius: 40px;
+
+// a propos
+$about-margin-bottom: 300px;
+$about-margin-top: 100px;
+
+// cards
+$image-overlay-opacity: 0.5; // Opacité de l'overlay au repos
+$image-overlay-hover-opacity: 1; // Opacité de l'overlay au survol
+$image-overlay-transition-duration: 0.3s; // Durée de transition de l'opacité
+$image-overlay-background-color: rgba(0, 0, 0, $image-overlay-opacity); // Couleur de fond de l'overlay
+$image-overlay-text-color: white; // Couleur du texte de l'overlay
+$image-overlay-text-size: 24px; // Taille du texte de l'overlay
+$image-overlay-spacing: 10px; // Espacement entre les liens de l'overlay
+
+// navbar
+$navbar-background-color: #fff8f5;
+$navbar-hover-color: #009092;
+$navbar-hover-border-color: #009092;
+
+//skills icones
+$icon-size: 80px;
+$icon-margin: 30px;
+$icon-border-radius: 10%;
+$icon-box-shadow: 0 0 10px rgb(0, 144, 146);
+$icon-color: #0f0823;

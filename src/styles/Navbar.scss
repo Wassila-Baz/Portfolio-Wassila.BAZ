@@ -1,11 +1,13 @@
-// Navbar.scss
+@import '../styles/mixins'; // Importez votre fichier de mixins
+@import '../styles/variables.scss';
 
 nav {
+    @include center-content; // Utilisation de la mixin pour centrer le contenu
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    background-color: #fff8f5;
+    background-color: $navbar-background-color;
     text-decoration: none;
     height: 60px;
     border-bottom-left-radius: 10px;
@@ -16,12 +18,12 @@ nav {
       }
   
     &:hover {
-      border-bottom: 1px solid #009092;
+      border-bottom: 1px solid $navbar-hover-border-color;
       transition: all 0.3s ease;
     }
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
@@ -33,15 +35,15 @@ nav {
     white-space: nowrap;
   
     &:hover {
-      box-shadow: inset 0 -7px #009092;
+      box-shadow: inset 0 -7px $navbar-hover-color; // Utilisation de la variable pour la couleur au survol
       color: #292929;
       transition: all 0.5s ease-out;
       gap: 5px;
-      border-bottom: 1px solid #009092;
+      border-bottom: 1px solid $navbar-hover-border-color; // Utilisation de la variable pour la couleur de la bordure au survol
     }
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -53,17 +55,14 @@ nav {
       justify-content: center;
       gap: 9px;
       margin: auto;
-     
     }
-  }
-  
-  .logo {
+}
+
+.logo {
     img {
-      display: block; // Correction pour éviter les espaces blancs indésirables sous l'image
+      display: block;
       width: 100%;
-      max-width: 322px; // Ajustez selon vos besoins
-      height: auto; // Pour maintenir le rapport hauteur/largeur
+      max-width: 322px;
+      height: auto;
     }
-  }
-  
-  
+}
