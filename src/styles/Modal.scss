@@ -1,4 +1,7 @@
-/* Ajoutez ces styles à votre fichier CSS principal */
+
+@import 'variables'; 
+@import 'mixins'; 
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -9,18 +12,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Assurez-vous que la modale est au-dessus du reste du contenu */
+  z-index: 9999;
 }
 
 .modal-content {
   background: #fff;
   width: 80%;
-  height: 80%; /* Ajustez la hauteur selon vos besoins */
+  height: 80%;
   max-width: 800px;
-  max-height: 600px; /* Ajustez la hauteur selon vos besoins */
+  max-height: 600px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  overflow: auto; /* Permet le défilement si le contenu dépasse la hauteur définie */
+  overflow: auto;
 }
 
 .modal-header {

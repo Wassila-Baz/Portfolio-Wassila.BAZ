@@ -1,14 +1,17 @@
 // Home.jsx
 import React from 'react';
-import Cards  from '../composants/Cards';
+import Projects from '../composants/Projects';
+import About from '../composants/About';
+import Skills from '../composants/Skills';
 
 
 function Home() {
-  // Votre contenu de la page d'accueil
   return (
-
-    <Cards />
-
+    <div>
+      <About />
+      <Projects />
+      <Skills />
+    </div>
   );
 }
 

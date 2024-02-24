@@ -4,12 +4,8 @@ import "../styles/Cards.scss";
 const Card = ({ title, imageSrc, githubLink, liveLink, onClick }) => {
   const handleCardClick = (event) => {
     if (!event.target.closest('a')) {
-      event.preventDefault();
-      if (onClick) {
-        onClick();
-      } else {
-        window.open(liveLink, "_blank"); // Ouvre le lien dans un nouvel onglet
-      }
+      event.preventDefault(); // Empêche le comportement par défaut du clic sur le lien
+      onClick(); // Appelle la fonction onClick pour ouvrir la modal
     }
   };
 
@@ -19,8 +15,16 @@ const Card = ({ title, imageSrc, githubLink, liveLink, onClick }) => {
         <img src={imageSrc} alt={title} />
         <div className="overlay">
           <div className="links">
-            <a href={githubLink} target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-lg"></i></a>
-            <a href={liveLink} target="_blank" rel="noopener noreferrer"><i className="fas fa-link fa-lg"></i></a>
+            {githubLink && (
+              <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github fa-lg"></i>
+              </a>
+            )}
+            {liveLink && (
+              <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-link fa-lg"></i>
+              </a>
+            )}
           </div>
         </div>
       </div>
