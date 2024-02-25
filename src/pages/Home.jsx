@@ -1,18 +1,17 @@
-// Home.jsx
 import React from 'react';
-import Projects from '../composants/Projects';
 import About from '../composants/About';
 import Skills from '../composants/Skills';
-
+import Projects from '../composants/Projects';
 
 function Home() {
   return (
     <div>
-      <About />
-      <Projects />
-      <Skills />
+      <About id="apropos" />
+      <Projects id="skills" />
+      <Skills id="projects" />
     </div>
   );
 }
+
 
 export default Home;

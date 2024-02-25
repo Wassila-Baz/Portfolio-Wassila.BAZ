@@ -1,4 +1,3 @@
-// main.scss
 @import 'variables'; 
 
 .image-container {
@@ -16,11 +15,12 @@
   align-items: center;
   background-color: $image-overlay-background-color;
   color: $image-overlay-text-color; 
-  opacity: $image-overlay-opacity;
+  opacity: 0; /* Commencez par définir l'opacité à 0 par défaut */
   transition: opacity $image-overlay-transition-duration ease; 
 }
 
-.overlay:hover {
+/* Définissez le style d'opacité sur le survol */
+.image-container:hover .overlay {
   opacity: $image-overlay-hover-opacity; 
 }
 

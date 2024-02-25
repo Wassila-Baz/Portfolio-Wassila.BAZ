@@ -1,16 +1,18 @@
-
 @import 'variables';
 @import 'mixins';
 
 .about-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Changez la direction en colonne pour les écrans plus petits */
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  margin-bottom: $about-margin-bottom; // Utilisation de la variable
   margin-top: $about-margin-top; // Utilisation de la variable
+  
+  @media screen and (min-width: 768px) {
+    flex-direction: row; /* Revenez à la direction en ligne pour les écrans plus grands */
+  }
 }
 
 .about-content {
@@ -28,6 +30,10 @@ h2 {
   max-width: 466px;
   margin: 0 auto;
   border-radius: 10px;
+  
+  @media screen and (min-width: 768px) {
+    padding: 20px 0; /* Réduisez la marge haut et bas pour les écrans plus grands */
+  }
 }
 
 h2 {

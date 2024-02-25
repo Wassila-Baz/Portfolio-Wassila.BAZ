@@ -12,6 +12,8 @@ const SkillsComponent = () => {
         <img src='/reactjs.png' alt="ReactJS" className="icon " />
         <img src='/sass.png' alt="Sass" className="icon" />
         <img src='/javascript.png' alt="JavaScript" className="icon" />
+        <img src='/redux.png' alt="Redux" className="icon" />
+        <img src='/R-Seo.png' alt="SEO" className="icon" />
       </div>
     </div>
   );
