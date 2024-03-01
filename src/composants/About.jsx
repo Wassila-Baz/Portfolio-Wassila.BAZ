@@ -4,7 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 
 function About() {
   return (
-    <div className="about-container">
+    <div id="apropos" className="about-container">
       <div className="lottie-container">
         <Player
           autoplay

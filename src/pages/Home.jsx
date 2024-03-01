@@ -6,6 +6,7 @@ import Projects from '../composants/Projects';
 function Home() {
   return (
     <div>
+    <div></div>
       <About id="apropos" />
       <Projects id="skills" />
       <Skills id="projects" />

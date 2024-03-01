@@ -16,7 +16,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="section-content">
+    <section id="projects" className="section-content">
       <h2> Mes Projets </h2>
       <div className="project-container">
         {projectsData.map((project) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Importez Link depuis react-router-dom
+import { Link } from "react-scroll"; // Importez Link depuis react-scroll pour le défilement en douceur
 import "../styles/Navbar.scss";
 import image from "../assets/images/PORTFOLIO.png"; 
 
@@ -10,10 +10,10 @@ const Navbar = () => {
         <img src={image} alt="Portfolio Logo" />
       </div>
       <div className="nav-links">
-        {/* Utilisez le composant Link avec l'attribut "to" pour la navigation interne */}
-        <Link to="/#apropos">À propos</Link>
-        <Link to="/#skills">Mes compétences</Link>
-        <Link to="/#projects">Mes projets</Link>
+        {/* Utilisez Link de react-scroll avec les identifiants des sections */}
+        <Link to="apropos" smooth={true} duration={500}>À propos</Link>
+        <Link to="skills" smooth={true} duration={500}>Mes compétences</Link>
+        <Link to="projects" smooth={true} duration={500}>Mes projets</Link>
       </div>
     </nav>
   );

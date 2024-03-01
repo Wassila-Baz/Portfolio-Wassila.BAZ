@@ -3,7 +3,7 @@ import "../styles/Skills.scss";
 
 const SkillsComponent = () => {
   return (
-    <div className="skills-container">
+    <div  id="skills" className="skills-container">
       <h2>Compétences</h2>
       <div className="icon-container">
         <img src='/figma.png' alt="Figma" className="icon" />
